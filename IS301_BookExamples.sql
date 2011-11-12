@@ -246,3 +246,21 @@ SELECT P_CODE, P_DESCRIPT, P_INDATE
 FROM PRODUCT
 WHERE P_INDATE IS NULL	
 
+-- Using LIKE Special Operator
+
+-- Smilar to Smith~
+SELECT V_NAME, V_CONTACT, V_AREACODE, V_PHONE
+FROM   VENDOR
+WHERE  V_CONTACT LIKE 'Smith%'
+
+-- Not Smilar to Smith~
+SELECT V_NAME, V_CONTACT, V_AREACODE, V_PHONE
+FROM   VENDOR
+WHERE  V_CONTACT NOT LIKE 'Smith%'
+
+--Book uses Johns_n but that is not in the vendor table replaced with Sm_th
+SELECT *
+FROM   VENDOR
+WHERE  V_CONTACT LIKE 'Sm_th'
+
+
