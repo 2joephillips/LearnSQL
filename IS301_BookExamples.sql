@@ -93,4 +93,9 @@ VALUES ('13-Q2/P2','7.25-in. pwr. saw blade','12-13-09',32,15,14.99, 0.05,21225)
 
 SELECT * FROM PRODUCT
 		
-	
+-- Inserting row with a NULL for the VENDOR
+INSERT INTO PRODUCT
+	VALUES('BTR-345','Titanium drill bit','18-OCT-09',75,10,4.50,0.06,NULL)	
+/*	 Another way to do this it below:
+INSERT INTO PRODUCT	(P_CODE , P_DESCRIPT) VALUES (	'BTR-345','Titanium drill bit')
+*/
