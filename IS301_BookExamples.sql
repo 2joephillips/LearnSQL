@@ -191,3 +191,26 @@ SELECT P_DESCRIPT, P_QOH, P_MIN, P_PRICE, P_INDATE
 FROM PRODUCT
 WHERE P_INDATE >= '20-JAN-2010'
 
+--SELECT QUIERIES WITH COMPUTATIONS
+--This creates a third column with  no name
+SELECT P_DESCRIPT, P_QOH, P_PRICE, P_QOH * P_PRICE
+FROM PRODUCT  
+
+--To resolve the No Name we assign an alias
+SELECT P_DESCRIPT, P_QOH, P_PRICE, P_QOH * P_PRICE as TOTVALUE
+FROM PRODUCT  
+
+/* Using dates To get the dates to match googled the following solution 
+REPLACE(CONVERT(VARCHAR(11), GETDATE(), 106), ' ', '-') AS [DD-Mon-YYYY]
+it acutally converted to dd-Jan-yyy
+*/
+SELECT P_CODE, P_INDATE,GETDATE()-90 AS CUTDATE
+FROM   PRODUCT
+WHERE  P_INDATE <= GETDATE() - 90
+
+--Increase the date
+SELECT P_CODE,P_INDATE, P_INDATE+90 AS EXPDATE
+FROM PRODUCT 
+
+
+
