@@ -99,3 +99,15 @@ INSERT INTO PRODUCT
 /*	 Another way to do this it below:
 INSERT INTO PRODUCT	(P_CODE , P_DESCRIPT) VALUES (	'BTR-345','Titanium drill bit')
 */
+SELECT * FROM PRODUCT
+
+-- Simply put saves all changes.
+COMMIT
+
+-- SELECT 
+SELECT * FROM PRODUCT
+
+-- Trick to using the intelisense is to fill out the FROM [TABLE] first
+SELECT P_CODE, P_DESCRIPT, P_QOH, P_MIN, P_PRICE,P_DISCOUNT,V_CODE
+FROM PRODUCT
+
