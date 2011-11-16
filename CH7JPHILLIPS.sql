@@ -9,6 +9,8 @@ Tables:
 	Assignment
 	Employee
 	Project
+	
+Create all the Results for the Homework then delete all tables and database created. 
 */
 
 CREATE DATABASE Ch_07ConstructCoJPhillps
@@ -310,4 +312,20 @@ WHERE EXISTS (SELECT PROJ_NUM, SUM(ASSIGN_HOURS),SUM(ASSIGN_HOURS * ASSIGN_CHG_H
 FROM ASSIGNMENT
 GROUP BY PROJ_NUM)
 
-*/
+
+
+-- Remove all tables and database
+DROP VIEW REP_1
+DROP TABLE ASSIGNMENT
+DROP TABLE PROJECT
+DROP TABLE EMPLOYEE
+DROP TABLE EMP_1JP
+DROP TABLE EMP_2JP
+DROP TABLE JOB
+GO 
+
+USE master
+GO 
+
+DROP DATABASE Ch_07ConstructCoJPhillps
+GO 
