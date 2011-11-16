@@ -1,19 +1,18 @@
 
 /* To ensure that my code works I will be creating my on DB from scratch with all the 
-tables and references from scratch
-*/
-DROP VIEW REP_1
-DROP TABLE ASSIGNMENT
-DROP TABLE PROJECT
-DROP TABLE EMPLOYEE
-DROP TABLE EMP_1JP
-DROP TABLE EMP_2JP
-DROP TABLE JOB
+tables and references
 
-/*
+This will create;
+Database Ch_07ConstructCoJPhillps
+Tables:
+	Job
+	Assignment
+	Employee
+	Project
+*/
+
 CREATE DATABASE Ch_07ConstructCoJPhillps
 GO
-*/
 
 BEGIN TRANSACTION -- For Commit in PROBLEM 4
 USE Ch_07ConstructCoJPhillps
@@ -311,3 +310,4 @@ WHERE EXISTS (SELECT PROJ_NUM, SUM(ASSIGN_HOURS),SUM(ASSIGN_HOURS * ASSIGN_CHG_H
 FROM ASSIGNMENT
 GROUP BY PROJ_NUM)
 
+*/
